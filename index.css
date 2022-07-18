@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #020c1b;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game-board {
+  background: #1a3263;
+  width: 100vmin;
+  height: 100vmin;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+.snake {
+  background: #e8e2db;
+  border: 0.25vmin solid black;
+}
+
+.food {
+  background: #0ab30a;
+  border: 0.25vmin solid black;
+}
+
+.speed,
+.segment {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  align-items: center;
+  gap: 10px;
+}
+.segment {
+  margin-right: 0;
+  margin-left: 50px;
+}
+.speed input,
+.segment input {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.speed button,
+.segment button {
+  height: 0px;
+  width: 0px;
+  outline: none;
+  background-color: transparent;
+
+  border-right: 25px solid aqua;
+  border-left: 25px solid aqua;
+  border-top: 25px solid aqua;
+  border-bottom: 25px solid aqua;
+}
+.speed button:first-child,
+.segment button:first-child {
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid aqua;
+}
+.speed :nth-child(3),
+.segment :nth-child(3) {
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 25px solid aqua;
+  border-bottom: 25px solid transparent;
+}
+.speed p,
+.segment p {
+  color: #fff;
+  font-size: 20px;
+}
